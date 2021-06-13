@@ -1,0 +1,43 @@
+*, *:before, *:after {box-sizing: inherit;}
+
+html, body {height:100%;}
+html {font-size: 62.5%;background: rgb(245,245,245);}
+body {position: relative;}
+
+.locked {overflow:hidden;}
+
+h1 {font-size: 3rem;}
+h2 {font-size: 2.6rem;margin-bottom: 15px;}
+
+button {border: 0;background: #333;color: #fff;}
+
+#header {position: fixed;top: 0;left: 0;width: 100%;height: 5.6rem;padding: 1rem 1.8rem;background: #fff;color: #333;box-sizing: border-box;}
+
+#wrap {display:flex;align-items: center;justify-content: center;height:100%;padding:5.6rem 2.4rem 0;}
+#wrap .button-wrap button {width:100%;padding:1rem;border:1px solid #000;font-size:2rem;}
+
+/* popup */
+.popup {display: flex; align-items: center; justify-content: center; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.3); } 
+.popup .popup-container {position: relative; width: calc(100% - 32px); height: auto; background: #fff;}
+.popup-head {padding: 1rem;}
+.popup-body {padding: 1rem 0 0; font-size: 1rem;}
+.popup-close {position: absolute; top: 0; right: 0;}
+.popup-close button {width: 3rem; height: 3rem;}
+
+.alert-cont p {padding: 0 2rem 2rem; font-size: 1.6rem; line-height: 1.4rem;}
+.alert-buttons {display: flex; align-items: center; justify-content: space-between;}
+.alert-buttons button {flex: 1;padding:1rem 0;}
+.alert-buttons button + button {border-left:1px solid #ddd;}
+
+.button-pink {width: calc(100% - 3rem); padding: 1rem; margin: 0 1.5rem 2rem;border-radius: 0.5rem; background-color: pink; color: #333; font-weight: bold;}
+.popup-container.ani-on {animation: slideUp 0.5s; opacity: 1;}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
