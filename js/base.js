@@ -28,6 +28,28 @@ $(function(){
         focusBack,
         highestZIndex;
 
+    openPopup = function(popID, cb) {        
+        tgPopup = $('#'+popID);
+        tgPopup
+            .fadeIn()
+            .find('.popup-container').addClass('ani-on').attr('tabindex', '0').focus();
+
+        highestZIndex = setLastZIndex();
+        tgPopup.css('z-index', highestZIndex);
+        
+        trapFocus(tgPopup);
+        $('body').addClass('locked');
+    }
+
+    closePopup = function(popID, cb) {
+        tgPopup = $('#'+popID);
+        tgPopup
+            .hide()
+            .find('.popup-container').attr('tabindex', '');
+
+        $(document).find('[data-focus-back="'+popID+'"]').focus();
+    }
+
     openAlert = function(popID, cb) {        
         tgPopup = $('#'+popID);
         tgPopup

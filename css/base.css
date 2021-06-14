@@ -10,6 +10,7 @@ h1 {font-size: 3rem;}
 h2 {font-size: 2.6rem;margin-bottom: 15px;}
 
 button {border: 0;background: #333;color: #fff;}
+button + button {margin-top:2rem;}
 
 #header {position: fixed;top: 0;left: 0;width: 100%;height: 5.6rem;padding: 1rem 1.8rem;background: #fff;color: #333;box-sizing: border-box;}
 
@@ -24,6 +25,11 @@ button {border: 0;background: #333;color: #fff;}
 .popup-close {position: absolute; top: 0; right: 0;}
 .popup-close button {width: 3rem; height: 3rem;}
 
+.popup.popup--bottomup {align-items: flex-end;}
+.popup--bottomup .popup-container {position:relative; width:100%; height:auto; background: #fff;}
+.popup--bottomup .title, 
+.popup--bottomup .popup-cont {font-size: 1.6rem;}
+
 .alert-cont p {padding: 0 2rem 2rem; font-size: 1.6rem; line-height: 1.4rem;}
 .alert-buttons {display: flex; align-items: center; justify-content: space-between;}
 .alert-buttons button {flex: 1;padding:1rem 0;}
@@ -31,10 +37,22 @@ button {border: 0;background: #333;color: #fff;}
 
 .button-pink {width: calc(100% - 3rem); padding: 1rem; margin: 0 1.5rem 2rem;border-radius: 0.5rem; background-color: pink; color: #333; font-weight: bold;}
 .popup-container.ani-on {animation: slideUp 0.5s; opacity: 1;}
+.popup--bottomup .popup-container.ani-on {animation: slideUpBtm 0.5s; opacity: 1;}
+
 @keyframes slideUp {
     from {
         opacity: 0;
         transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideUpBtm {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
     }
     to {
         opacity: 1;
