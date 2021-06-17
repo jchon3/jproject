@@ -1,10 +1,16 @@
 *, *:before, *:after {box-sizing: inherit;}
 
 html, body {height:100%;}
-html {font-size: 62.5%;background: rgb(245,245,245);}
+html {font-size: 62.5%;background: rgb(245,245,245);
+    --blue: #159ce4;
+    --lgt-blue: #67cff3;
+    --drk-blue: #147ec1;
+    --black: #32383c;}
 body {position: relative;}
 
 .locked {overflow:hidden;}
+
+a:focus, button:focus {outline:none;box-shadow:0 0 0 3px rgba(21,156,228,0.4);}
 
 h1 {font-size: 3rem;}
 h2 {font-size: 2.6rem;margin-bottom: 15px;}
@@ -30,6 +36,9 @@ button + button {margin-top:2rem;}
 .popup--bottomup .title, 
 .popup--bottomup .popup-cont {font-size: 1.6rem;}
 
+.popup.popup--full {align-items: flex-start;width:100%;}
+.popup.popup--full .popup-container {position:relative; width:100%; height:100vh; background: #fff;}
+
 .alert-cont p {padding: 0 2rem 2rem; font-size: 1.6rem; line-height: 1.4rem;}
 .alert-buttons {display: flex; align-items: center; justify-content: space-between;}
 .alert-buttons button {flex: 1;padding:1rem 0;}
@@ -38,6 +47,9 @@ button + button {margin-top:2rem;}
 .button-pink {width: calc(100% - 3rem); padding: 1rem; margin: 0 1.5rem 2rem;border-radius: 0.5rem; background-color: pink; color: #333; font-weight: bold;}
 .popup-container.ani-on {animation: slideUp 0.5s; opacity: 1;}
 .popup--bottomup .popup-container.ani-on {animation: slideUpBtm 0.5s; opacity: 1;}
+
+.btns {display:flex;align-items: center;justify-content: center;height:100vh;}
+.btns button { width: auto; padding: 1rem 3rem;}
 
 @keyframes slideUp {
     from {

@@ -14,7 +14,7 @@
         
     <div id="wrap">
         <div class="button-wrap">
-            <!-- <button type="button" onclick="openModal('fullPopup');">Full Popup Open</button> -->
+            <button type="button" onclick="openPopup('popupID_4');" data-focus-back="popupID_4">Full Popup Open</button>
             <button type="button" onclick="openPopup('popupID_3');" data-focus-back="popupID_3">BottomUp Popup Open</button>
             <button type="button" onclick="openAlert('popupID_1');" data-focus-back="popupID_1">Popup Open</button>
         </div>
@@ -23,15 +23,19 @@
     <footer id="footer"></footer>
 
     <!-- 1) popup-name="full-popup" -->
-    <!-- <div id="fullPopup" class="popup popup--full" aria-hidden="true" tabindex="0">
-        <div class="popup-head"><h1 class="title">Full Popup</h1></div>
-        <div class="popup-cont">
-            <p style="padding: 2rem 0;">
-                <button type="button" onclick="openModal('bottomUpPopup');">BottomUp Popup Open</button>
-            </p>
+    <div id="popupID_4" class="popup popup--full" aria-hidden="true" style="display: none;">
+        <div class="popup-container">
+            <div class="popup-head"><h1 class="title">Full Popup</h1></div>
+            <div class="popup-cont">
+                <div class="btns">
+                    <button type="button" onclick="openPopup('popupID_3');" data-focus-back="popupID_3">BottomUp Popup Open</button>
+                </div>
+            </div>
+            <div class="popup-close">
+                <button class="btn-popup-close" onclick="closePopup('popupID_4')">X</button>
+            </div> 
         </div>
-        <button class="btn-popup-close" onclick="closeModal('fullPopup')">X</button>
-    </div> -->
+    </div>
 
 
     <!-- 1-2) popup-name="bottomup" -->
